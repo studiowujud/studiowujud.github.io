@@ -638,8 +638,8 @@ ul {
 }
 
 .contact-whatsapp-icon {
-  font-size: 3rem;
   margin-bottom: 16px;
+  line-height: 1;
 }
 
 .contact-whatsapp h3 {
