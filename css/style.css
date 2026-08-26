@@ -477,11 +477,12 @@ ul {
   font-family: var(--font-serif);
   font-size: 1.15rem;
   margin-bottom: 12px;
+  color: var(--color-dark);
 }
 
 .service-card p {
   font-size: 0.9rem;
-  color: var(--color-muted);
+  color: var(--color-dark);
   line-height: 1.7;
 }
 
