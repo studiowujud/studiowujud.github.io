@@ -60,8 +60,8 @@ ul {
   left: 0;
   width: 100%;
   z-index: 1000;
-  background: transparent;
-  transition: background var(--transition), box-shadow var(--transition);
+  background: var(--color-white);
+  transition: box-shadow var(--transition);
   height: var(--nav-height);
 }
 
@@ -86,7 +86,7 @@ ul {
 }
 
 .nav-logo img {
-  height: 28px;
+  height: 56px;
   width: auto;
   display: block;
 }
