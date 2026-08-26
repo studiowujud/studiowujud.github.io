@@ -230,7 +230,7 @@ ul {
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  color: var(--color-accent);
+  color: var(--color-dark);
   margin-bottom: 24px;
 }
 
