@@ -485,6 +485,16 @@ ul {
   line-height: 1.7;
 }
 
+.service-card-bg {
+  background-size: cover;
+  background-position: center;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 /* About Page */
 .about-content {
   display: grid;
