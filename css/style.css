@@ -82,6 +82,13 @@ ul {
   font-size: 1.4rem;
   letter-spacing: 0.05em;
   color: var(--color-dark);
+  line-height: 0;
+}
+
+.nav-logo img {
+  height: 40px;
+  width: auto;
+  display: block;
 }
 
 .nav-logo span {
