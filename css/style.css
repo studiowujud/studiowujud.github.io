@@ -594,7 +594,7 @@ ul {
 .clients-track {
   display: flex;
   width: max-content;
-  animation: marquee 30s linear infinite;
+  animation: marquee 70s linear infinite;
 }
 
 .clients-track:hover {
@@ -613,15 +613,7 @@ ul {
   width: auto;
   max-width: 180px;
   object-fit: contain;
-  filter: grayscale(1);
-  opacity: 0.6;
-  transition: filter var(--transition), opacity var(--transition);
   flex-shrink: 0;
-}
-
-.clients-track-inner img:hover {
-  filter: grayscale(0);
-  opacity: 1;
 }
 
 @keyframes marquee {
