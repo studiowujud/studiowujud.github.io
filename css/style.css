@@ -496,6 +496,80 @@ ul {
   align-items: center;
 }
 
+/* Clients (Zig-zag) */
+.client-rows {
+  margin-top: 48px;
+}
+
+.client-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+  margin-bottom: 96px;
+}
+
+.client-row:last-child {
+  margin-bottom: 0;
+}
+
+.client-row-flip .client-row-image {
+  order: 2;
+}
+
+.client-row-image {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--color-secondary);
+}
+
+.client-row-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.client-row:hover .client-row-image img {
+  transform: scale(1.03);
+}
+
+.client-row-tag {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--color-accent);
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+.client-row-text h3 {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.client-row-text p {
+  color: var(--color-muted);
+  line-height: 1.8;
+  margin-bottom: 28px;
+}
+
+.client-row-link {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-dark);
+  border-bottom: 1px solid var(--color-accent);
+  padding-bottom: 4px;
+  transition: color var(--transition);
+}
+
+.client-row-link:hover {
+  color: var(--color-accent);
+}
+
 /* About Page */
 .about-content {
   display: grid;
@@ -770,6 +844,10 @@ ul {
     column-count: 2;
   }
 
+  .client-row {
+    gap: 40px;
+  }
+
   .footer-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -825,6 +903,20 @@ ul {
   .footer-grid {
     grid-template-columns: 1fr;
     gap: 32px;
+  }
+
+  .client-row {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin-bottom: 64px;
+  }
+
+  .client-row-flip .client-row-image {
+    order: 0;
+  }
+
+  .client-row-text h3 {
+    font-size: 1.5rem;
   }
 
   .footer-bottom {
