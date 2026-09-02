@@ -410,40 +410,76 @@ ul {
   opacity: 0.8;
 }
 
-/* Lightbox */
-.lightbox {
-  display: none;
-  position: fixed;
-  inset: 0;
-  z-index: 2000;
-  background: rgba(0, 0, 0, 0.9);
-  padding: 48px;
-  cursor: pointer;
-  align-items: center;
-  justify-content: center;
+/* Project Detail Pages */
+.back-link {
+  display: inline-block;
+  margin-top: 28px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-muted);
+  transition: color var(--transition);
 }
 
-.lightbox.active {
+.back-link:hover {
+  color: var(--color-accent);
+}
+
+.zigzag-grid {
   display: flex;
+  flex-direction: column;
+  gap: 96px;
 }
 
-.lightbox img {
-  max-width: 90vw;
-  max-height: 90vh;
-  object-fit: contain;
+.zigzag-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
 }
 
-.lightbox-close {
-  position: absolute;
-  top: 24px;
-  right: 32px;
-  background: none;
-  border: none;
-  color: var(--color-white);
-  font-size: 2rem;
-  cursor: pointer;
-  padding: 8px;
-  line-height: 1;
+.zigzag-item:nth-child(even) .zigzag-media {
+  order: 2;
+}
+
+.zigzag-item:nth-child(even) .zigzag-text {
+  order: 1;
+}
+
+.zigzag-media {
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: var(--color-secondary);
+}
+
+.zigzag-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.zigzag-text h3 {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+}
+
+.zigzag-text p {
+  color: var(--color-muted);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.zigzag-text p:last-child {
+  margin-bottom: 0;
+}
+
+.project-pager {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
 }
 
 /* Services Grid */
@@ -875,6 +911,23 @@ ul {
 
   .gallery-grid {
     column-count: 1;
+  }
+
+  .zigzag-grid {
+    gap: 64px;
+  }
+
+  .zigzag-item {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .zigzag-item:nth-child(even) .zigzag-media {
+    order: 1;
+  }
+
+  .zigzag-item:nth-child(even) .zigzag-text {
+    order: 2;
   }
 
   .page-header h1 {

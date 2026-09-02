@@ -40,46 +40,6 @@
     })
   }
 
-  /* ── Lightbox ── */
-  const lightbox = document.getElementById('lightbox')
-  const lightboxImage = document.getElementById('lightboxImage')
-  const lightboxClose = document.getElementById('lightboxClose')
-
-  if (lightbox && lightboxImage) {
-    document.querySelectorAll('.gallery-item').forEach(function (item) {
-      item.addEventListener('click', function () {
-        const img = item.querySelector('img')
-        if (img) {
-          lightboxImage.src = img.src
-          lightboxImage.alt = img.alt
-          lightbox.classList.add('active')
-          document.body.style.overflow = 'hidden'
-        }
-      })
-    })
-
-    function closeLightbox() {
-      lightbox.classList.remove('active')
-      document.body.style.overflow = ''
-    }
-
-    if (lightboxClose) {
-      lightboxClose.addEventListener('click', closeLightbox)
-    }
-
-    lightbox.addEventListener('click', function (e) {
-      if (e.target === lightbox) {
-        closeLightbox()
-      }
-    })
-
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape') {
-        closeLightbox()
-      }
-    })
-  }
-
   /* ── Fade-in on scroll ── */
   const fadeElements = document.querySelectorAll('.fade-in')
 
