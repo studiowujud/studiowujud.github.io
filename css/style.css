@@ -363,6 +363,7 @@ ul {
 }
 
 .gallery-item {
+  display: block;
   break-inside: avoid;
   margin-bottom: 16px;
   position: relative;
